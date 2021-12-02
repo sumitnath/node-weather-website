@@ -4,6 +4,7 @@ const express = require('express')
 const hbs = require('hbs')
 const { send } = require('process')
 const app = express()
+const port = process.env.PORT || 3000
 const request = require('postman-request')
 const forecast = require('./utils/weatherapi')
 const geocodingApi = require('./utils/geocodingApi')
@@ -141,6 +142,11 @@ app.get('*', (req,res)=>{
     errorMessage: 'Page not found'
   })
 })
-app.listen(3000,()=>{
-console.log('Server is upo the 3000')
-})
+// 
+// app.listen(3000,()=>{
+// console.log('Server is upo the 3000')
+// })
+// change port for both locally & horku
+app.listen(port,()=>{
+  console.log('Server is upo the' + port)
+  })
