@@ -25,7 +25,7 @@ const forecast= (long,lat,callback) =>{
     //   // weather_descriptions: response.body.current.weather_descriptions,
     //   // feelslike: response.body.current.feelslike,
     //  weatherReport : 'It is currently ' +response.body.current.temperature + ' celcius their is ' +response.body.current.precip +'% of rain, weather is '+response.body.current.weather_descriptions  + '. It feels like ' +  response.body.current.feelslike +' degree out' 
-    weatherReport : 'It is currently ' +body.current.temperature + ' celcius their is ' +body.current.precip +'% of rain, weather is '+body.current.weather_descriptions  + '. It feels like ' +  body.current.feelslike +' degree out'
+    weatherReport : 'It is currently ' +body.current.temperature + ' celcius their is ' +body.current.precip +'% of rain, weather is '+body.current.weather_descriptions  + '. It feels like ' +  body.current.feelslike +' degree out. and  ' +body.location.localtime +' is local time' +body.current.pressure + ' is atmospheric pressure. Current visibility is ' +body.current.visibility
       })
      }
   })
